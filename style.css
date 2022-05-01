@@ -20,8 +20,8 @@ header {
 
 #meme-image-container {
   border: 1px solid black;
-  height: 400px;
-  width: 400px;
+  height: 250px;
+  width: 250px;
   display: flex;
   justify-content: center;
   margin: auto;
@@ -30,8 +30,8 @@ header {
 }
 
 #meme-text {
-  height: 380px;
-  width: 380px;
+  height: 230px;
+  width: 230px;
   font-size: 30px;
   color: #fff;
   text-shadow: rgb(0, 0, 0) 5px 5px 5px;
@@ -62,4 +62,16 @@ header {
 
 #earth {
   background-color: rgb(0, 128, 0);
+}
+
+#meme-preview-container {
+  margin: auto;
+  margin-top: 30px;
+}
+
+.meme-preview {
+  height: 100px;
+  width: 100px;
+  background-color: black;
+  margin: 10px;
 }

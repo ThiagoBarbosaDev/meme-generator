@@ -9,6 +9,15 @@ const buttonWater = document.querySelector('#water');
 const buttonEarth = document.querySelector('#earth');
 
 const memeContainer = document.querySelector('#meme-image-container');
+const memesPreview = document.querySelectorAll('.meme-preview');
+
+function previewClickHandler() {
+  memeImage.setAttribute('src', this.src);
+}
+
+memesPreview.forEach((meme) => {
+  meme.addEventListener('click', previewClickHandler);
+});
 
 function handleTextInputToMeme() {
   textInput.addEventListener('input', () => {
@@ -22,11 +31,7 @@ imageInput.addEventListener('change', () => {
   const reader = new FileReader();
   const image = imageInput.files[0];
 
-  console.log(image);
-
   reader.addEventListener('load', () => {
-    console.log(reader);
-    console.log(reader.result);
     memeImage.setAttribute('src', reader.result);
   });
 
